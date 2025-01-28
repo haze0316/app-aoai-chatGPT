@@ -18,6 +18,7 @@
     "types": ["vite/client", "jest", "mocha"],
     "noUnusedLocals": false
   },
-  "include": ["src"],
+  "include": ["src",
+  "global.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

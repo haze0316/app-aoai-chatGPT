@@ -2,6 +2,7 @@ import { useRef, useState, useEffect, useContext, useLayoutEffect } from 'react'
 import { CommandBarButton, IconButton, Dialog, DialogType, Stack } from '@fluentui/react'
 import { SquareRegular, ShieldLockRegular, ErrorCircleRegular } from '@fluentui/react-icons'
 
+
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
@@ -39,6 +40,7 @@ import { ChatHistoryPanel } from "../../components/ChatHistory/ChatHistoryPanel"
 import { AppStateContext } from "../../state/AppProvider";
 import { useBoolean } from "@fluentui/react-hooks";
 
+
 const enum messageStatus {
   NotRunning = 'Not Running',
   Processing = 'Processing',
@@ -65,7 +67,7 @@ const Chat = () => {
   const [errorMsg, setErrorMsg] = useState<ErrorMessage | null>()
   const [logo, setLogo] = useState('')
   const [answerId, setAnswerId] = useState<string>('')
-
+  
   const errorDialogContentProps = {
     type: DialogType.close,
     title: errorMsg?.title,
@@ -1041,3 +1043,7 @@ const Chat = () => {
 }
 
 export default Chat
+function initializeFileTypeIcons(arg0: string) {
+  throw new Error('Function not implemented.')
+}
+
